@@ -1,0 +1,14 @@
+
+{if $smarty.get.newtoken}
+	<p class="alert">Your token has been updated - the webhook URL has changed!</p>
+{/if}
+
+<p>This is your hook URL, the news are sent through it:</p>
+
+<p><code>{$this->getHookUrl()}</code></p>
+
+<p><b>Name on Youtube:</b> {$this->icfg.youtube|escape}</p>
+<p><b>Post to channel:</b> {$this->icfg.channel_name|escape}</p>
+<p><b>Bot name:</b> {$this->icfg.botname|escape}</p>
+
+<p><a href="{$this->getEditUrl()}" class="btn">Edit settings</a></p>
