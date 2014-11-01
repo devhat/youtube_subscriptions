@@ -1,7 +1,7 @@
-Slack-YouTube
+YouTube Subscriptions for Slack
 =========
 
-Slack-YouTube is a Slack Integration to follow and notify about YouTube channel posts.
+YouTube Subscription is a Slack Integration to follow and notify about YouTube channel posts.
 
 ## Installation
 
