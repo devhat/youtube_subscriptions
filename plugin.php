@@ -61,6 +61,15 @@
 
 			// ...
 
+			$v = "";
+			$message = $this->escapeLink("https://www.youtube.com/watch?v={$v}");
+
+			$this->postToChannel($message, array(
+				'channel'   => $this->icfg['channel'],
+				'username'  => $this->icfg['botname'],
+				'icon_url'  => 'http://oi58.tinypic.com/rk66va.jpg'
+			));
+
 		}
 
 		function getLabel(){
