@@ -59,10 +59,16 @@
 				);
 			}
 
-			// ...
+			$video = $req['post']['video'];
 
-			$v = "";
-			$message = $this->escapeLink("https://www.youtube.com/watch?v={$v}");
+			if (!$video || !is_string($video)){
+				return array(
+					'ok'	=> false,
+					'error' => "No video received from youtube",
+				);
+			}
+
+			$message = $this->escapeLink("https://www.youtube.com/watch?v={$video}");
 
 			$this->postToChannel($message, array(
 				'channel'   => $this->icfg['channel'],
