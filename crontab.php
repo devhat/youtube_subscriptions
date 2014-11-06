@@ -37,11 +37,14 @@
 
 		$youtube = new YoutubeResponse($hook['youtube']);
 
-		$options = array('http' => array('method'  => 'POST',
-			'content' => http_build_query(array('video' => $youtube->getVideo() )) ));
+		if ( !strpos(file_get_contents("{$dir}/data/data_hooks.php"), $youtube->getVideo()) ) {
 
-		file_get_contents("{$cfg['root_url']}hook.php?id={$id}&token={$hook['token']}",
-			false, stream_context_create($options) );
+			$options = array('http' => array('method'  => 'POST',
+				'content' => http_build_query(array('video' => $youtube->getVideo() )) ));
+
+			file_get_contents("{$cfg['root_url']}hook.php?id={$id}&token={$hook['token']}",
+				false, stream_context_create($options) );
+		}
 
 	}
 
