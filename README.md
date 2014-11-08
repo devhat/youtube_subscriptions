@@ -1,7 +1,7 @@
 YouTube Subscriptions for Slack
 =========
 
-YouTube Subscription is a Slack Integration to follow and notify about YouTube channel posts.
+YouTube Subscription is a Slack Integration to follow and notify about channel posts.
 
 
 ## Requirements
@@ -21,3 +21,6 @@ For integrations that require polling, this case, `cron` is also required.
 At the end of configuration you'll need to append a call on your system crontab:
 
     30 * * * * curl -s http://localhost/hammock/plugins/youtube_subscriptions/crontab.php
+
+
+## Screenshots
